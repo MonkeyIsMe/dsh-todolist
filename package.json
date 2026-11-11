@@ -1,0 +1,28 @@
+{
+  "name": "@local/dsh-todo",
+  "version": "1.4.5",
+  "private": true,
+  "description": "To-do list panel: projects, tasks, subtasks, due dates, priorities, with remote Git push and pull.",
+  "type": "module",
+  "exports": {
+    ".": "./host.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "host.js",
+    "impl.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
